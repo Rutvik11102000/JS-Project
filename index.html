@@ -1,15 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Number System Converter</title>
+
+    <link rel=" stylesheet" href="styles.css">
+    <script src="script.js"></script>
 </head>
+
 <body>
-    <h1>hello world</h1>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam repudiandae beatae autem provident quia natus voluptas, deleniti cumque iure voluptatibus dolore aperiam possimus numquam! Vitae id labore quam repellat quibusdam!
-    </p>
-    
+    <main>
+        <h1>Number System Converter</h1>
+        <br />
+        <div id="select-container">
+            <select id="ipType">
+                <option value="from-binary">Binary</option>
+                <option value="from-decimal">Decimal</option>
+                <option value="from-hexadecimal">Hexa-Decimal</option>
+                <option value="from-octal">Octal</option>
+            </select>
+
+            <span>to</span>
+
+            <select id="opType">
+                <option value="to-binary">Binary</option>
+                <option value="to-decimal">Decimal</option>
+                <option value="to-hexadecimal">Hexa-Decimal</option>
+                <option value="to-octal">Octal</option>
+            </select>
+        </div>
+
+        <div id="input-container">
+            <input type="text" placeholder="Binary Number" id="ipNum">
+
+        </div>
+        <button id="convert-button" onclick="convert()">Convert</button>
+
+        <input type="text" id="opNum" placeholder="Binary Number" readonly>
+    </main>
 </body>
+
 </html>
