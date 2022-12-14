@@ -1,46 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Number System Converter</title>
 
-    <link rel=" stylesheet" href="styles.css">
-    <script src="script.js"></script>
-</head>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<body>
+  <body>
     <main>
-        <h1>Number System Converter</h1>
-        <br />
-        <div id="select-container">
-            <select id="ipType">
-                <option value="from-binary">Binary</option>
-                <option value="from-decimal">Decimal</option>
-                <option value="from-hexadecimal">Hexa-Decimal</option>
-                <option value="from-octal">Octal</option>
-            </select>
+      <h1>Number System Converter</h1>
+      <br/>
+      <div id="select-container">
+        <!-- from Dropdown -->
+        <select id="from">
+          <option value="2">Binary</option>
+          <option value="8">Octal</option>
+          <option value="10">Decimal</option>
+          <option value="16">Hexa-Decimal</option>
+        </select>
 
-            <span>to</span>
+        <span>to</span>
 
-            <select id="opType">
-                <option value="to-binary">Binary</option>
-                <option value="to-decimal">Decimal</option>
-                <option value="to-hexadecimal">Hexa-Decimal</option>
-                <option value="to-octal">Octal</option>
-            </select>
-        </div>
+        <!-- to dropdown -->
+        <select id="to">
+          <option value="2">Binary</option>
+          <option value="8">Octal</option>
+          <option value="10">Decimal</option>
+          <option value="16">Hexa-Decimal</option>
+        </select>
+      </div>
 
-        <div id="input-container">
-            <input type="text" placeholder="Binary Number" id="ipNum">
+      <!-- input field -->
+      <div id="input-container">
+        <input
+          type="text"
+          id="input-number"
+          placeholder="Enter Value"
+          class="input-field"
+        />
+      </div>
 
-        </div>
-        <button id="convert-button" onclick="convert()">Convert</button>
+      <!-- buttons -->
+      <div>
+        <button id="swap">Swap</button>
+        <button id="convert">Convert</button>
+      </div>
+      <br />
 
-        <input type="text" id="opNum" placeholder="Binary Number" readonly>
+      <!-- result box -->
+      <div id="result-box">
+        <!--
+        <input type="text" placeholder="Result" readonly />
+          -->
+      </div>
+
+      <script src="script.js"></script>
     </main>
-</body>
-
+  </body>
 </html>
